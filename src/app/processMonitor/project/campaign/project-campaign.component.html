@@ -1,0 +1,55 @@
+<div [ngBusy]="busy"></div>
+<div *ngIf="dataError == true">
+  <label class="label-error">{{ 'genericError' | translate:lang }} </label>
+</div>
+<div id="container_Campaign" class="container">
+  <div class="custom-site">
+    <label id="site" class="custom-label-site">  {{ 'projectCampaignComponent.selectSite' | translate:lang }} </label>
+  </div>
+  <div class="custom-site-select">
+    <select class="custom-select" [ngModel]="selectedValue" (change)="onChange($event.target.value)">
+    <option *ngFor="let mf of mfs" value="{{mf.id}}">{{mf.name}}</option>
+    </select>
+  </div>
+  <div id="container" class="container">
+    <div class="panel-group custom-panel" id="accordion">
+      <div class="panel panel-default" *ngFor="let campaignLot of campaignLots; let campaignIndex=index" id="card">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a id="custom-panel" class="collapsed" data-toggle="collapse" href="#collapseOne_campaignIndex{{campaignIndex}}">
+              <div id="card-campaign" class="row">
+                <div class="col-sm-4 custom-title" id="campNames">
+                  <label id="campaignName1">{{ 'projectCampaignComponent.campaign' | translate:lang }} {{campaignLot.campaign.name}}</label>
+                  <label id="campaignName2">{{campaignLot.lotCount}} {{ 'projectCampaignComponent.lots' | translate:lang }}</label>
+                </div>
+                <div class="col-sm-4">
+                  <div class="progress" id="progressbarCampaign">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" [ngStyle]="{'width': campaignLot.campaign.rag_totals.R + '%' }">
+                      <label style="padding-top: 22px"> {{ campaignLot.campaign.rag_totals.R | number : decimalPrecision }}%  </label>
+                    </div>
+                    <div class="progress-bar progress-bar-warning" role="progressbar" [ngStyle]="{'width': campaignLot.campaign.rag_totals.A + '%' }">
+                      <label style="padding-top: 22px"> {{ campaignLot.campaign.rag_totals.A | number : decimalPrecision }}%  </label>
+                    </div>
+                    <div class="progress-bar progress-bar-success" role="progressbar" [ngStyle]="{'width': campaignLot.campaign.rag_totals.G +  (100 - (campaignLot.campaign.rag_totals.R +  campaignLot.campaign.rag_totals.A + campaignLot.campaign.rag_totals.G) ) + '%' }">
+                      <label style="padding-top: 22px"> {{ campaignLot.campaign.rag_totals.G | number : decimalPrecision }}%  </label>
+                    </div>
+                  </div>
+                </div>
+                <label id="blastView" class="label-blast-view custom-color" style="cursor: pointer;" (click)="openDialogBlastView(campaignLot.campaign.id,campaignLot.campaign.name,$event)"> {{ 'projectCampaignComponent.blastView' | translate:lang }} </label>
+                <md-icon id="blastView_icon" class="custom-color" style="cursor: pointer;" (click)="openDialogBlastView(campaignLot.campaign.id,campaignLot.campaign.name,$event)">
+                  <label class="col-sm-1" id="blastView_icon">ic_launch</label>
+                </md-icon>
+              </div>
+            </a>
+          </h4>
+        </div>
+
+        <div id="collapseOne_campaignIndex{{campaignIndex}}" class="panel-collapse collapse">
+          <div class="panel-body">
+            <lots [campaignId]="campaignLot.campaign.id"></lots>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

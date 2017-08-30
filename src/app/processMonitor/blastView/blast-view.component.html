@@ -1,0 +1,75 @@
+<div class="divCloseModal">
+  <button class="btnCloseModal" md-button md-dialog-close="X">X</button>
+</div>
+<br /><br /><br />
+<div class="blastView-container mat-elevation-z8" id="blastViewId">
+  <md-paginator dataSource="dataSource" #paginator [length]="blastViewDatabase.data.length" [pageSize]="10">
+  </md-paginator>
+  <div id="campName"> {{ 'blastViewComponent.campaign' | translate:lang }}: {{ campaignName }}
+  </div>
+  <br />
+  <div class="panel-group custom-table">
+    <div class="panel panel-default default-table">
+      <div class="panel-heading">
+        <h4 class="panel-title title-table">{{ 'blastViewComponent.table_title' | translate:lang }}
+        </h4>
+      </div>
+    </div>
+  </div>
+  <div class="panel-body">
+    <md-table #table [dataSource]="dataSource" mdSort>
+      <ng-container cdkColumnDef="processId">
+        <md-header-cell *cdkHeaderCellDef md-sort-header>{{'blastViewComponent.process' | translate:lang}}</md-header-cell>
+        <md-cell *cdkCellDef="let row"> {{row.process}} </md-cell>
+      </ng-container>
+
+
+      <ng-container cdkColumnDef="lotId">
+        <md-header-cell *cdkHeaderCellDef md-sort-header>{{'blastViewComponent.lot' | translate:lang}}</md-header-cell>
+        <md-cell *cdkCellDef="let row"> {{row.lot}} </md-cell>
+      </ng-container>
+
+
+      <ng-container cdkColumnDef="unitopId">
+        <md-header-cell *cdkHeaderCellDef md-sort-header>{{'blastViewComponent.unit_op' | translate:lang}}</md-header-cell>
+        <md-cell *cdkCellDef="let row"> {{row.unit_op}} </md-cell>
+      </ng-container>
+
+
+      <ng-container cdkColumnDef="parameterId">
+        <md-header-cell *cdkHeaderCellDef md-sort-header>{{'blastViewComponent.parameter' | translate:lang}}</md-header-cell>
+        <md-cell *cdkCellDef="let row"> {{row.parameterName}} </md-cell>
+      </ng-container>
+
+      <ng-container cdkColumnDef="statusId">
+        <md-header-cell *cdkHeaderCellDef md-sort-header>{{'blastViewComponent.status' | translate:lang}}</md-header-cell>
+        <md-cell *cdkCellDef="let row">
+          <div class="progress" id="progressbar_blastView">
+            <div class="progress-bar progress-bar-danger" *ngIf="row.status=='R'" role="progressbar" [ngStyle]="{'width': 100 + '%' }">
+            </div>
+            <div class="progress-bar progress-bar-warning" *ngIf="row.status=='A'" role="progressbar" [ngStyle]="{'width': 100 + '%' }">
+            </div>
+            <div class="progress-bar progress-bar-success" *ngIf="row.status=='G'" role="progressbar" [ngStyle]="{'width': 100 + '%' }">
+            </div>
+          </div>
+        </md-cell>
+      </ng-container>
+
+      <ng-container cdkColumnDef="sourceId">
+        <md-header-cell *cdkHeaderCellDef md-sort-header> </md-header-cell>
+        <md-cell id="source" *cdkCellDef="let row" style="cursor: pointer;" (click)="openDialog(row.lot,row.unit_op,row.parameterId,row.parameterName)">
+          <md-icon class="icon-source" id="table-source">
+            <label id="source_icon">filter_none</label>
+          </md-icon>
+          <label id="source_label">{{row.source}}</label>
+        </md-cell>
+      </ng-container>
+
+      <md-header-row *cdkHeaderRowDef="displayedColumns"></md-header-row>
+      <md-row *cdkRowDef="let row; columns: displayedColumns;"></md-row>
+    </md-table>
+    <div *ngIf="error">
+      <label class="label-error">{{ error | translate:lang }} </label>
+    </div>
+  </div>
+</div>

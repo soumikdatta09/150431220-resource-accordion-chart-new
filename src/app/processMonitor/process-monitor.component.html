@@ -1,0 +1,22 @@
+<div>
+  <div class="homeIntro" id="tabs">
+    <md-tab-group class="tabLabels" [selectedIndex]="selectedTab" id="labelId" (click)="onLinkClick($event)">
+      <md-tab>
+        <ng-template md-tab-label>
+          <div id="processTabs">{{ 'processMonitorComponent.site' | translate:lang }}</div>
+        </ng-template>
+      </md-tab>
+      <md-tab>
+        <ng-template md-tab-label>
+          <div id="processTabs">{{ 'processMonitorComponent.project' | translate:lang }}</div>
+        </ng-template>
+      </md-tab>
+      <md-tab>
+        <ng-template md-tab-label>
+          <div id="processTabs">{{ 'processMonitorComponent.molecularFormat' | translate:lang }}</div>
+        </ng-template>
+      </md-tab>
+    </md-tab-group>
+  </div>
+  <router-outlet></router-outlet>
+</div>

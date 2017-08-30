@@ -1,0 +1,54 @@
+<div [ngBusy]="busy"></div>
+<div id="content" class="contentHeader">
+  <label id="utilization" class="custom-header"> {{ 'utilizationComponent.efficiency' | translate:lang }} </label>
+  <label id="datePicker" class="custom-date"> {{ 'utilizationComponent.dateRange' | translate:lang }} </label>
+  <span class="glyphicon glyphicon-calendar custom-date-range"> </span>
+</div>
+<div *ngIf="dataError == true">
+  <label class="label-error">{{ 'genericError' | translate:lang }} </label>
+</div>
+<div *ngIf="errorCampaign" class="alert-danger">{{ 'utilizationComponent.errorMsgCampaign' | translate:lang}}</div>
+<div class="col-sm-4" *ngFor="let manufacturingUnit of manufacturingUnits;" (click)="getInstrumentTypesPage(manufacturingUnit.id,manufacturingUnit.name)">
+  <md-card class="custom_card" style="padding-left: 0;padding-top: 0">
+    <div class="card-header">
+      <label id="label-header" id="manufacturingUnitName"> {{ manufacturingUnit.name}} </label>
+      <img src="../assets/images/ic_more_horiz.png" class="image image_allign" />
+    </div>
+    <div>
+      <div id="instrument">
+        <md-card-footer class="custom-card-instrument">
+          <label class="label-count"> {{ manufacturingUnit.resources.instrument_count }}</label>
+          <label class="label-type"> {{ 'utilizationComponent.instruments' | translate:lang }} </label>
+        </md-card-footer>
+      </div>
+      <div id="people">
+        <md-card-footer class="custom-card-people">
+          <label class="label-count"> {{ manufacturingUnit.resources.people_count }} </label>
+          <label class="label-type"> {{ 'utilizationComponent.people' | translate:lang }} </label>
+        </md-card-footer>
+      </div>
+      <div id="device">
+        <md-card-footer class="custom-card-device">
+          <label class="label-count"> {{ manufacturingUnit.resources.device_count }}</label>
+          <label class="label-type"> {{ 'utilizationComponent.devices' | translate:lang }} </label>
+        </md-card-footer>
+      </div>
+      <div class="progress">
+        <md-card-footer class="card-ayg-percent">
+          <label class="label-amber"> {{ manufacturingUnit.resources.rag_totals.R | number : decimalPrecision }}% </label>
+          <label class="label-yellow"> {{ manufacturingUnit.resources.rag_totals.A | number : decimalPrecision }}%   </label>
+          <label class="label-green"> {{ manufacturingUnit.resources.rag_totals.G | number : decimalPrecision }}% </label>
+        </md-card-footer>
+        <div class="progress-bar progress-bar-danger" role="progressbar" [ngStyle]="{'width': manufacturingUnit.resources.rag_totals.R + '%' }">
+        </div>
+        <div class="progress-bar progress-bar-warning" role="progressbar" [ngStyle]="{'width': manufacturingUnit.resources.rag_totals.A + '%' }">
+        </div>
+        <div class="progress-bar progress-bar-success" role="progressbar" [ngStyle]="{'width': manufacturingUnit.resources.rag_totals.G +  (100 - (manufacturingUnit.resources.rag_totals.R +  manufacturingUnit.resources.rag_totals.A + manufacturingUnit.resources.rag_totals.G) ) + '%' }">
+        </div>
+      </div>
+    </div>
+    <div>
+      <md-card-footer id="details" class="custom_card_footer"> {{ 'utilizationComponent.details' | translate:lang }} </md-card-footer>
+    </div>
+  </md-card>
+</div>

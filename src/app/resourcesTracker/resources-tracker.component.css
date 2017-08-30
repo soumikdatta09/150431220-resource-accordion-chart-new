@@ -1,0 +1,9 @@
+.resource {
+    background-color:#536B8E;
+}
+div#resourceTabs {
+ color: #ffffff;
+}
+>>> .mat-ink-bar {
+    background-color: #00BFFF;
+}

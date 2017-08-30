@@ -1,0 +1,159 @@
+{
+    "appComponent": {},
+    "appTitle": "ALabs",
+    "genericError": "An unknown error occurred. Please try again later or contact the administrator.",
+    "loginComponent": {
+        "headerLogin": "Login",
+        "Email": "Email*",
+        "Password": "Password*",
+        "submit": "Submit",
+        "errorMsg": "Incorrect Email or Password. Please try again",
+        "errorEmail": "Email is Required",
+        "errorPassword": "Password is Required",
+        "sessionErrorMsg": "Your session is expired. Please login again."
+    },
+    "homeComponent": {
+        "home": "Home",
+        "processMonitor": "Process",
+        "resourcesTracker": "Resources",
+        "content360": "Content",
+        "criticalPaths": "Critical",
+        "patternView": "Pattern",
+        "welcome": "Welcome",
+        "role": "Role:",
+        "logout": "Logout",
+        "about": "About",
+        "contact": "Contact",
+        "copyright": "Cognizant. All rights reserved."
+    },
+    "homeContentComponent": {
+        "homeIntroContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt ultricies blandit. Donec posuere, ipsum quis vehicula imperdiet, ipsum nibh semper nunc, id fringilla risus ligula sed arcu. Nam eu gravida ligula, ac vulputate nisi. Aliquam tempor bibendum magna eu aliquam. Ut tempus ultricies erat ac porttitor. Nulla sit amet erat molestie, suscipit elit nec, dapibus ante. Nulla pretium tortor id mi elementum, quis scelerisque quam pulvinar. Duis at nibh varius, dictum magna luctus, vestibulum tellus. Donec et tincidunt libero."
+    },
+    "processMonitorComponent": {
+        "processMonitor": "Process",
+        "tileContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "campaigns": "campaigns",
+        "details": "DETAILS",
+        "site": "SITE",
+        "project": "PROJECT",
+        "molecularFormat": "MOLECULAR FORMAT"
+    },
+    "lotsComponent": {
+        "lot#": "Lot # ",
+        "errorMsgProcessArea": "No Data to Display",
+        "errorFormulation": "No Data to Display",
+        "errorUpStream": "No Data to Display",
+        "errorDownStream": "No Data to Display",
+        "source": "Source",
+        "upstream": "Upstream",
+        "downstream": "Downstream",
+        "formulation": "Formulation",
+        "campaign": "Campaign",
+        "errorCpp": "No Data to Display",
+        "labelUpstream": "UPSTREAM",
+        "labelDownstream": "DOWNSTREAM",
+        "labelFormulation": "FORMULATION"
+    },
+    "resourcesTrackerComponent": {
+        "resourcesTracker": "Resources",
+        "tileContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "utilization": "UTILIZATION",
+        "downtime": "DOWNTIME",
+        "calibration": "CALIBRATION"
+    },
+    "utilizationComponent": {
+        "utilization": "Utilization",
+        "instruments": "Instruments",
+        "people": "People",
+        "devices": "Devices",
+        "details": "DETAILS",
+        "efficiency": "Overall Utilization Efficiency",
+        "errorMsgCampaign": "No Data to Display",
+        "dateRange": "July 9 - July 22, 2017"
+    },
+    "downtimeComponent": {
+        "downtime": "Downtime"
+    },
+    "calibrationComponent": {
+        "calibration": "Calibration"
+    },
+    "content360Component": {
+        "content360": "Content",
+        "tileContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "primarySources": "Primary Sources",
+        "selectAll": "Select All",
+        "unselect": "Unselect",
+        "errorMsgContent": "No Data to Display",
+        "searchAll": "Search All",
+        "contentSearch": "Content Search",
+        "refineSearch": "Refine Search",
+        "category": "Literature"
+    },
+    "criticalPathsComponent": {
+        "criticalPaths": "Critical Paths",
+        "tileContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    "patternViewComponent": {
+        "patternView": "Pattern",
+        "tileContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    "campaignComponent": {
+        "upstream": "Upstream",
+        "downstream": "Downstream",
+        "formulation": "Formulation",
+        "NodataforUpstream": "No data for Upstream",
+        "NodataforDownstream": "No data for Downstream",
+        "NodataforFormulation": "No data for Formulation",
+        "lots": "Lots",
+        "blastView": "BlastView",
+        "errorMsg": "No Data to Display"
+    },
+    "sourceComponent": {
+        "unitOperation": "Unit Operation",
+        "parameter": "Parameter",
+        "unitOfMeasure": "Unit of Measure",
+        "processRangeLo": "Process Range (LO)",
+        "processRangeHi": "Process Range (HI)",
+        "normOpRangeLolo": "Normal Operating Range (LOLO)",
+        "normOpRangeHihi": "Normal Operating Range (HIHI)",
+        "actualValue": "Actual Value",
+        "classification": "Classification",
+        "status": "Status",
+        "errorMsg": "No Data to Display"
+    },
+    "projectCampaignComponent": {
+        "selectSite": "Select Site",
+        "campaign": "Campaign",
+        "lots": "Lots",
+        "blastView": "BLAST VIEW",
+        "errorMsgCampaign": "No Data to Display"
+    },
+    "blastViewComponent": {
+        "campaign": "Campaign",
+        "table_title": "Path to Critical Process Parameters",
+        "process": "Process",
+        "lot": "Lot",
+        "unit_op": "Unit Operation",
+        "parameter": "Parameter",
+        "status": "Status"
+    },
+    "instrumentTypesComponent": {
+        "errorResourceCategory": "No Data to Display",
+        "labelInstruments": "INSTRUMENTS",
+        "labelPeople": "PEOPLE",
+        "labelDevices": "DEVICES",
+        "labelHeader": "Overall utilization Efficiency",
+        "dateRange": "July 9 - July 22, 2017",
+        "donutTitle": "utilization",
+        "operatingLabel": "Operating",
+        "idleLabel": "Idle",
+        "offLabel": "Off",
+        "reportsTabText": "Reports",
+        "notesTabText": "Notes"
+    },
+    "instrumentUtilizationComponent": {
+        "operationTabHeaderLabel": "OPERATION",
+        "reportsTabHeaderLabel": "REPORTS",
+        "notesTabHeaderLabel": "NOTES"
+    }
+}

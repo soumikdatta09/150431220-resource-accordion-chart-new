@@ -1,0 +1,189 @@
+.contentHeader{
+  margin-left: 3.5%;
+  margin-bottom: 3%;
+  margin-top: 2.5%;
+  font-weight: bold;
+}
+.mat-card{
+  padding-left: 0;
+  padding-right: 0;
+}
+.custom_card{
+  height: 250px;
+  width: 300px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 13%;
+}
+.custom_card_footer{
+  position: absolute;
+  text-align: right;
+  font-weight: 500;
+  padding-right: 10%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color: #E8E8E8;
+  opacity: 0.83;
+  font-family: Arial;
+  font-size: 14px;
+}
+.progress{
+  width: 300px;
+  height: 205px;
+  border-radius: 0px;
+}
+mat-card-content{
+  margin-bottom: 0px;
+}
+mat-card-title {
+  margin-bottom: 0px; 
+}
+.card-header {
+  font-weight: bold;
+  font-size: 16px;
+  padding-left: 10%;
+  padding-top: 4%;
+  padding-bottom: 2%;
+}
+.label-header{
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.progress-bar-danger{
+  background-color: #FFB324;
+}
+.progress-bar-warning{
+  background-color: #F4ED11;
+}
+.progress-bar-success{
+  background-color:  #B3EA32;;
+}
+.custom-card-people{
+  position: absolute;
+  text-align: center;
+  font-weight: 500;
+  padding-left: 30%;
+  padding-right: 35%;
+  padding-bottom: 22%;
+}
+.label-type{
+  display: block;
+  font-weight: bold;
+  padding-left: 0;
+  margin-bottom: 0;
+  color: #000000;
+  font-size: 14px;
+  opacity: 0.41;
+  font-family: Arial;
+}
+.label-count{
+  display: block;
+  font-family: Arial;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: #000000;
+  opacity: 0.41;
+  height:55px;
+}
+.card-ayg-percent{
+  position: absolute;
+  font-weight: 500;
+  padding-right: 15%;
+  padding-top: 15%;
+  padding-bottom: 63%;
+}
+.label-amber{
+  position: absolute;
+  width: 22%;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 4px;
+  text-align: right;
+  margin-bottom: 0;
+  text-decoration-line: underline;
+  text-decoration-color: #FFB324;
+  background-color: #FFB324;
+  color: #4A4A4A;
+  font-size:18px;
+}
+.label-yellow{
+  position: absolute;
+  width: 25%;
+  margin-left: 23%;
+  text-align: right;
+  padding-right: 4px;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-decoration-line: underline;
+  text-decoration-color: #F4ED11;
+  background-color: #F4ED11;
+  color: #4A4A4A;
+  font-size:18px;
+}
+.label-green{
+  position: absolute;
+  width: 50%;
+  text-align: left;
+  margin-left: 50%;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-decoration-line: underline;
+  text-decoration-color: #B3EA32;
+  background-color: #B3EA32;;
+  color: #4A4A4A;
+  font-size:18px;
+}
+.image_allign{
+  float: right;
+  margin-right: 5%;
+}
+.col-sm-4{
+    width: 337px;
+    padding-left: 40px;
+}
+.plus{
+    padding-top: 10px;
+    height: 50px;
+    width: 50px;
+    color: #34c5fe;
+}
+>>> .mat-card {
+    height:250px;
+    margin-bottom: 10%;
+}
+.custom-card-instrument{
+    padding-left: 5%;
+    padding-bottom: 22%;
+}
+.custom-card-device{
+    padding-left: 70%;
+    padding-bottom: 22%;
+}
+.custom-header{
+  color: #536C8E;
+  font-size: 16px;
+  font-weight: normal;
+}
+.alert-danger {
+    background-color: #F8F9F9;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.custom-date{
+  color: #536C8E;
+  font-size: 16px;
+  font-weight: normal;
+  padding-left: 18%;
+}
+.custom-date-range{
+  color: #536C8E;
+  padding-left: 0.5%;
+} 
+.label-error{
+    color: red;
+    text-align: center;
+    padding-left: 150px;
+    padding-top: 100px;
+}

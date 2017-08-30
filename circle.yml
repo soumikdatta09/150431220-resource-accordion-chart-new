@@ -1,0 +1,13 @@
+machine:
+  node:
+    version: 6.9.2
+test:
+  pre:
+    - npm run lint
+  override:
+    - npm run test:once
+deployment:
+  production:
+    branch: master
+    heroku:
+      appname: smartlabs-staging

@@ -1,0 +1,22 @@
+<div>
+  <div class="resource" id="tabs">
+    <md-tab-group [selectedIndex]="selectedTab" id="labelResourceId" (click)="onLinkClick($event)">
+      <md-tab>
+        <ng-template md-tab-label>
+          <div id="resourceTabs">{{ 'resourcesTrackerComponent.utilization' | translate:lang }}</div>
+        </ng-template>
+      </md-tab>
+      <md-tab>
+        <ng-template md-tab-label>
+          <div id="resourceTabs">{{ 'resourcesTrackerComponent.downtime' | translate:lang }}</div>
+        </ng-template>
+      </md-tab>
+      <md-tab>
+        <ng-template md-tab-label>
+          <div id="resourceTabs">{{ 'resourcesTrackerComponent.calibration' | translate:lang }}</div>
+        </ng-template>
+      </md-tab>
+    </md-tab-group>
+  </div>
+  <router-outlet></router-outlet>
+</div>

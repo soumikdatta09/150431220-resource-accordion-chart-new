@@ -1,0 +1,130 @@
+<div [ngBusy]="busy"></div>
+<div class="container">
+    <br /><br />
+    <label id="mfsEfficiency" style="cursor: pointer;" (click)="getmfsPageForResourceUtilization()">{{ 'instrumentTypesComponent.labelHeader' | translate:lang}}</label>
+    <label id="mfsName"> | {{ mfs_name }}</label>
+    <label id="datePicker" class="custom-date"> {{ 'utilizationComponent.dateRange' | translate:lang }} </label>
+    <span class="glyphicon glyphicon-calendar custom-date-range"> </span>
+    <br /><br />
+    <div *ngIf="dataError == true">
+        <label class="label-error">{{ 'genericError' | translate:lang }} </label>
+    </div>
+    <md-tab-group md-stretch-tabs="always" [selectedIndex]="selectedTab" id="instrumentTypes_tabs" class="instrumentTypesTabs">
+        <md-tab id="color_tabs" label="{{ 'instrumentTypesComponent.labelInstruments' | translate:lang }}">
+            <br /> <br />
+            <div class="panel-group" id="accordion">
+                <div *ngIf="errorInstruments" class="alert-danger">{{ 'instrumentTypesComponent.errorResourceCategory' | translate:lang}}</div>
+                <div class="panel panel-default" *ngFor="let instrumentType of instrumentTypes; let instrumentTypeIndex=index" id="panel_default_first">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseOne_instrumentTypeIndex{{instrumentTypeIndex}}">
+                                <div class="row">
+                                    <div class="col-sm-6 custom-title">
+                                        <label id="instrumentTypeNameId">{{ instrumentType.name }} - {{ instrumentType.count }}</label>
+                                    </div>
+                                    <div class="col-sm-1 custom-cpp">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="progress" id="progressbarFirst">
+                                            <div class="progress-bar progress-bar-amber" role="progressbar" [ngStyle]="{'width': instrumentType.rag_totals.R + '%' }">
+                                                <label class="label-amber"> {{ instrumentType.rag_totals.R | number : decimalPrecision }}%  </label>
+                                            </div>
+                                            <div class="progress-bar progress-bar-yellow" role="progressbar" [ngStyle]="{'width': instrumentType.rag_totals.A + '%' }">
+                                                <label class="label-yellow"> {{ instrumentType.rag_totals.A | number : decimalPrecision }}%  </label>
+                                            </div>
+                                            <div class="progress-bar progress-bar-green" role="progressbar" [ngStyle]="{'width': (100 - (instrumentType.rag_totals.R +  instrumentType.rag_totals.A ))  + '%' }">
+                                                <label class="label-green"> {{ instrumentType.rag_totals.G | number : decimalPrecision }}%  </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne_instrumentTypeIndex{{instrumentTypeIndex}}" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="panel-group">
+                                <div class="panel panel-default" *ngFor="let instruments of instrumentType.instruments; let instrumentsIndex=index" id="panel_default_collapseSecond">
+                                    <div class="panel-heading" id="panel_heading_collapseSecond">
+                                        <h4 class="panel-title" id="panel_title_collapseSecond">
+                                            <a data-toggle="collapse" href="#nested-collapseOne_instrumentTypeIndex{{instrumentTypeIndex}}_instrumentsIndex{{instrumentsIndex}}"
+                                                id="collapseSecond">
+                                                <div class="row" id="row_collapseSecond">
+                                                    <div class="col-sm-6 custom-title collapseSecond">
+                                                        <label id="instrumentsNameId">{{ instruments.name }}</label>
+                                                    </div>
+                                                    <div class="col-sm-1 custom-cpp">
+                                                    </div>
+                                                    <div class="col-sm-4 collapseSecond">
+                                                        <div class="progress" id="progressbarSecond">
+                                                            <div class="progress-bar progress-bar-amber" role="progressbar" [ngStyle]="{'width': instruments.rag_totals.R + '%' }">
+                                                                <label class="label-amber"> {{ instruments.rag_totals.R | number : decimalPrecision }}%  </label>
+                                                            </div>
+                                                            <div class="progress-bar progress-bar-yellow" role="progressbar" [ngStyle]="{'width': instruments.rag_totals.A + '%' }">
+                                                                <label class="label-yellow"> {{ instruments.rag_totals.A | number : decimalPrecision }}%  </label>
+                                                            </div>
+                                                            <div class="progress-bar progress-bar-green" role="progressbar" [ngStyle]="{'width': (100 - (instruments.rag_totals.R +  instruments.rag_totals.A ))  + '%' }">
+                                                                <label class="label-green"> {{ instruments.rag_totals.G | number : decimalPrecision }}%  </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="nested-collapseOne_instrumentTypeIndex{{instrumentTypeIndex}}_instrumentsIndex{{instrumentsIndex}}" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <md-tab-group md-stretch-tabs="always" [selectedIndex]="selectedTab" id="childTabs">
+                                                <md-tab label="{{ 'instrumentUtilizationComponent.operationTabHeaderLabel' | translate:lang}}">
+                                                    <div class="row">
+                                                        <div class="col-sm-3 divDonut">
+                                                            {{ 'instrumentTypesComponent.donutTitle' | translate:lang}}
+                                                            <canvas baseChart [labels]="instruments.label" [datasets]="instruments.dataset" [colors]="colorsEmptyObject" [chartType]="type"
+                                                                [legend]="false"></canvas>
+                                                        </div>
+                                                        <div class="col-sm-3 divDonutLegend">
+                                                            <h2>{{instruments.rag_totals.G | number : decimalPrecision}}%</h2>
+                                                            <h4>{{ 'instrumentTypesComponent.operatingLabel' | translate:lang}}</h4>
+                                                            <label class="lblDonutLegendGreen"></label>
+                                                        </div>
+                                                        <div class="col-sm-3 divDonutLegend">
+                                                            <h2>{{instruments.rag_totals.A | number : decimalPrecision}}%</h2>
+                                                            <h4>{{ 'instrumentTypesComponent.idleLabel' | translate:lang}}</h4>
+                                                            <label class="lblDonutLegendYellow"></label>
+                                                        </div>
+                                                        <div class="col-sm-3 divDonutLegend">
+                                                            <h2>{{instruments.rag_totals.R | number : decimalPrecision}}%</h2>
+                                                            <h4>{{ 'instrumentTypesComponent.offLabel' | translate:lang}}</h4>
+                                                            <label class="lblDonutLegendAmber"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <img src="../assets/images/instrument-utilization-bar-chart.PNG" />
+                                                        </div>
+                                                    </div>
+                                                </md-tab>
+                                                <md-tab label="{{ 'instrumentUtilizationComponent.reportsTabHeaderLabel' | translate:lang}}">
+                                                    {{ 'instrumentTypesComponent.reportsTabText' | translate:lang}}
+                                                </md-tab>
+                                                <md-tab label="{{ 'instrumentUtilizationComponent.notesTabHeaderLabel' | translate:lang}}">
+                                                    {{ 'instrumentTypesComponent.notesTabText' | translate:lang}}
+                                                </md-tab>
+                                            </md-tab-group>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </md-tab>
+        <md-tab id="color_tabs" label="{{ 'instrumentTypesComponent.labelPeople' | translate:lang}}">
+            <div class="alert-danger">{{ 'instrumentTypesComponent.errorResourceCategory' | translate:lang}}</div>
+        </md-tab>
+        <md-tab id="color_tabs" label="{{ 'instrumentTypesComponent.labelDevices' | translate:lang}}">
+            <div class="alert-danger">{{ 'instrumentTypesComponent.errorResourceCategory' | translate:lang}}</div>
+        </md-tab>
+    </md-tab-group>
+</div>

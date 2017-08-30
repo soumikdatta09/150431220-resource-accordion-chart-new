@@ -1,0 +1,32 @@
+<md-toolbar color="primary" class="headerLogo">
+    <div class="headerArea">
+        <img src="../assets/images/burst-header@2x.png" alt="headerImage" class="loginHeaderLogo" />
+        <img src="../assets/images/Logo@3x.png" alt="headerImage" class="loginHeaderImage" />
+    </div>
+</md-toolbar>
+<md-card id="loginCard">
+    <h2>{{ 'loginComponent.headerLogin' | translate:lang }}</h2>
+    <hr /><br />
+    <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+        <div *ngIf="sessionErrorMsg" class="alert-danger">{{sessionErrorMsg | translate:lang }}</div><br/>
+        <div *ngIf="errorMsg" class="alert-danger">{{ errorMsg | translate:lang }}</div><br/>
+
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }" id="email">
+            <div *ngIf="errorEmail" class="alert-danger">{{ 'loginComponent.errorEmail' | translate:lang }}</div>
+            <md-input-container>
+                <input mdInput placeholder="{{ 'loginComponent.Email' | translate:lang }}" class="form-control" id="textEmail" name="email"
+                    [(ngModel)]="model.email" #email="ngModel" (click)="clickedEmail()" />
+            </md-input-container>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }" id="pwd">
+            <div *ngIf="errorPassword" class="alert-danger">{{ 'loginComponent.errorPassword' | translate:lang }}</div>
+            <md-input-container>
+                <input mdInput type="password" placeholder="{{ 'loginComponent.Password' | translate:lang }}" class="form-control" id="textPassword"
+                    name="password" [(ngModel)]="model.password" #password="ngModel" (click)="ckickedPassword()" />
+            </md-input-container>
+        </div>
+        <div class="form-group">
+            <button md-raised-button color="accent" [disabled]="loading" id="btnLogin">{{ 'loginComponent.submit' | translate:lang }}</button>
+        </div>
+    </form>
+</md-card>

@@ -1,0 +1,66 @@
+<div>
+    <md-card class="homeIntro">
+        <md-card-content>
+            <h1 class="homeIntroHeading"><img id="introImage" src="../../assets/images/LogoBlast.png" alt="headerImage" /></h1>
+        </md-card-content>
+        <md-card-footer>
+            <p class="homeIntroContent">{{ 'homeContentComponent.homeIntroContent' | translate:lang }}</p>
+        </md-card-footer>
+    </md-card>
+    <div>
+        <div id="labScientist">
+            <div *ngIf="role =='Lab Scientist'" class="col-sm-3">
+                <a routerLink="/home/processmonitor/project">
+                    <md-card id="processCard" class="navCardLeft">
+                        <div data-icon="p" class="icon large"></div>
+                        <h4>{{ 'processMonitorComponent.processMonitor' | translate:lang }}</h4>
+                        <p class="homeCardContent">{{ 'processMonitorComponent.tileContent' | translate:lang }}</p><br/>
+                        <md-icon class="plus">control_point</md-icon>
+                    </md-card>
+                </a>
+            </div>
+        </div>
+        <div id="labScientist">
+            <div *ngIf="role !='Lab Scientist'" class="col-sm-3">
+                <a routerLink="/home/processmonitor">
+                    <md-card id="processCard" class="navCardLeft">
+                        <div data-icon="p" class="icon large"></div>
+                        <h4>{{ 'processMonitorComponent.processMonitor' | translate:lang }}</h4>
+                        <p class="homeCardContent">{{ 'processMonitorComponent.tileContent' | translate:lang }}</p><br/>
+                        <md-icon class="plus">control_point</md-icon>
+                    </md-card>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <a routerLink="/home/resourcestracker">
+                <md-card id="resourceCard" class="navCards">
+                    <div data-icon="r" class="icon large"></div>
+                    <h4>{{ 'resourcesTrackerComponent.resourcesTracker' | translate:lang }}</h4>
+                    <p class="homeCardContent">{{ 'resourcesTrackerComponent.tileContent' | translate:lang }}</p><br/>
+                    <md-icon class="plus">control_point</md-icon>
+                </md-card>
+            </a>
+        </div>
+        <div class="col-sm-3">
+            <a routerLink="/home/content360">
+                <md-card id="contentCard" class="navCards">
+                    <div data-icon="c" class="icon large"></div>
+                    <h4>{{ 'content360Component.content360' | translate:lang }}</h4>
+                    <p class="homeCardContent">{{ 'content360Component.tileContent' | translate:lang }}</p><br/>
+                    <md-icon class="plus">control_point</md-icon>
+                </md-card>
+            </a>
+        </div>
+        <div class="col-sm-3">
+            <a routerLink="/home/patternview">
+                <md-card id="patternCard" class="navCardRight">
+                    <div data-icon="P" class="icon large"></div>
+                    <h4>{{ 'patternViewComponent.patternView' | translate:lang }}</h4>
+                    <p class="homeCardContent">{{ 'patternViewComponent.tileContent' | translate:lang }}</p><br/>
+                    <md-icon class="plus">control_point</md-icon>
+                </md-card>
+            </a>
+        </div>
+    </div>
+</div>

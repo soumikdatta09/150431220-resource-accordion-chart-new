@@ -1,0 +1,50 @@
+.alert-danger {
+    color: red;
+    font-size: smaller;
+}
+
+#loginCard {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+    height: auto;
+}
+
+md-input-container {
+    width: 100%;
+}
+
+button#btnLogin {
+    margin-left: 80%;
+    margin-top: 5%;
+    background-color: #ffa500;
+}
+
+.mat-toolbar.mat-primary{
+    background: #587091;
+}
+
+.headerLogo{
+    padding: 0 0 0 0px;
+}
+
+.headerArea{
+    margin-bottom: 30px;
+    padding-left: 0px;
+    padding-top: 0px;
+}
+
+.loginHeaderLogo{
+    margin-top: 14px;
+    height: 80px;
+}
+
+.loginHeaderImage{
+    margin-top: 14px;
+    height: 70px;
+    background-color:white;  
+    margin-bottom: -10px;
+    margin-left: -6px;
+    padding-top: 2px;
+}
+

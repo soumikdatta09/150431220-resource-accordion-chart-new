@@ -1,0 +1,39 @@
+<div [ngBusy]="busy"></div>
+<div id="content" class="contentHeader">
+</div>
+<div *ngIf="dataError == true">
+  <label class="label-error">{{ 'genericError' | translate:lang }} </label>
+</div>
+<div class="col-sm-4" *ngFor="let mf of mfs;">
+  <md-card class="custom_card" (click)="getMfsDetails(mf.id,mf.name)" style="padding-left: 0;padding-top: 0">
+    <div class="card-header">
+      <label id="label-header" id="manufacturingUnitName"> {{ mf.name}} </label>
+      <img src="../assets/images/ic_more_horiz.png" class="image image_allign" />
+    </div>
+    <div>
+      <div>
+        <md-card-footer class="custom-card-campaign-length">
+          <label class="label-campaign-count"> {{ mf.campaigns.length }} </label>
+          <label class="label-campaign"> {{ 'processMonitorComponent.campaigns'  | translate:lang }} </label>
+        </md-card-footer>
+      </div>
+      <div class="progress" (click)="getMfsDetails(mf.id,mf.name)">
+        <md-card-footer class="card-rag-percent">
+          <label class="label-red"> {{ mf.rag_totals.R | number : decimalPrecision }}%  </label>
+          <label class="label-amber"> {{ mf.rag_totals.A | number : decimalPrecision }}%  </label>
+          <label class="label-green"> {{ mf.rag_totals.G | number : decimalPrecision }}%  </label>
+        </md-card-footer>
+        <div class="progress-bar progress-bar-danger" role="progressbar" [ngStyle]="{'width': mf.rag_totals.R + '%' }">
+        </div>
+        <div class="progress-bar progress-bar-warning" role="progressbar" [ngStyle]="{'width': mf.rag_totals.A + '%' }" data-toggle="tooltip"
+          data-placement="top" title="{{ mf.rag_totals.A}}%">
+        </div>
+        <div class="progress-bar progress-bar-success" role="progressbar" [ngStyle]="{'width': mf.rag_totals.G +  (100 - (mf.rag_totals.R +  mf.rag_totals.A + mf.rag_totals.G) ) + '%' }">
+        </div>
+      </div>
+    </div>
+    <div (click)="getMfsDetails(mf.id,mf.name)">
+      <md-card-footer id="details" class="custom_card_footer"> {{ 'processMonitorComponent.details' | translate:lang }} </md-card-footer>
+    </div>
+  </md-card>
+</div>

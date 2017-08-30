@@ -1,0 +1,130 @@
+#content{
+   border-style: groove;
+   border-bottom-color: black;
+   border-bottom-width: 2px;
+   padding-top: 50px;
+   padding-right: 0px;
+   padding-bottom: 0px;
+   padding-left: 50px;
+   width: 800px;
+   height: 800px;
+}
+.card{
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 50px;
+    width: 1000px;
+    height: auto;
+    min-height:200px;
+    /* border-style: groove; */
+    margin-left:50px;
+    border-width:1px;
+    
+}
+  .title{
+    color:#1BBEFE;	
+    font-family: Roboto;	
+    font-size: 14px;
+  }
+  .header{
+     color: #373A3C;	
+     font-family: Roboto;
+     font-size: 18px;
+     margin-top: -80px;
+     text-align: center;
+     padding-left: 0px;
+     padding-bottom:20px
+    }
+
+    .headerTitle{
+      color: #373A3C;
+      font-family: Roboto;
+      font-size: 18px;
+    }
+
+    .headerMargin{
+      margin-left: -1%;
+    }
+
+    .mat-card-content{
+      margin-top: 2%;
+    }
+
+ .label-author{
+    color: #536C8E;	
+    font-family: Roboto;	
+    font-size: 14px;
+    font-weight:normal !important;
+  
+}
+  .row-margin{
+   margin-right: 0px;
+   height:90px;
+}
+.col-margin{
+  margin-right: 0%;
+  margin-left: 6%;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+.glyphicon-circle-arrow-left{
+    font-size: 36px;
+    color: #00bfff;
+    margin-top: 25%;
+    margin-left: 35%;
+    cursor: pointer;
+}
+.lblHeading{
+    font-size: 12px;
+    opacity: .6;
+    font-weight:normal !important;
+}
+.lblContent{
+  font-size: 18px;
+  color: #536c8e ;
+   font-weight:normal !important;
+}
+.glyphicon-search{
+    font-size: 24px;
+    color: #536c8e ;
+    height:24px;
+}
+.loginHeaderLogo{
+    margin-top: 14px;
+    height: 80px;
+    float:right;
+}
+.img{
+    width: 130px;
+    height: 50px;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-left: 2%;
+    float: right;
+}
+a#link{
+    color:#00bfff ;	
+    font-family: Roboto;	
+    font-size: 14px;
+    font-weight: bold;
+}
+  .Content{
+     text-align:center;
+      color: #373A3C;	
+     font-family: Roboto;
+     font-size: 18px;
+
+  }
+  >>>.mat-card>:last-child{
+      margin-bottom: 2%;
+      padding-bottom: 5%;
+    }
+
+ .content-margin{
+    margin-bottom: 5%;
+  }
+
+/* hr {
+  border-color: #536C8E;
+} */

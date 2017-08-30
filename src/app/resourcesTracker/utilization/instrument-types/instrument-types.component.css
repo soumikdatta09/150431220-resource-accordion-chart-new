@@ -1,0 +1,230 @@
+.progress-bar-amber {
+    background-color: #FFB324;
+}
+.progress-bar-yellow {
+    background-color: #F4ED11;
+}
+.progress-bar-green {
+    background-color: #B3EA32;
+}
+.container{
+  width: 100%;
+  height: 100%;
+}
+.progress{
+  margin-bottom: 0px;
+  width: 100%;
+  margin-left: 0;
+  height: 50px;
+  border-radius: 0px;
+}
+label#instrumentTypeNameId {
+    padding-left: 16px;
+    padding-top: 15px;
+    color: #4A4A4A;
+    font-family: Arial;	
+    font-size: 16px;	
+    font-weight: bold;
+}
+label#instrumentsNameId {
+    padding-left: 16px;
+    padding-top: 15px;
+    color: #4A4A4A;
+    font-family: Arial;	
+    font-size: 16px;	
+    font-weight: bold;
+}
+a.collapsed{
+    height: 25%;
+     width: 100%; 
+}
+.panel {
+    border: 0;
+}
+div#progressbarFirst { 
+    margin-left: -32%;
+}
+div#colsm4 {
+    margin-right: -33%;
+}
+div#panel_default_first {
+    margin-right: 5.14%;
+    margin-left: 5.6%;
+    background-color: #FFFFFF;	
+   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1), 0 1px 5px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.2);
+}
+.card-rag-percent{
+  position: absolute;
+  padding-top: 5%;
+}
+.label-amber{
+	color: #4A4A4A;	
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    text-align: center;
+    padding-top: 19px;
+}
+.label-yellow{
+	color: #4A4A4A;	
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    text-align: center; 
+    padding-top: 19px;  
+}
+.label-green{
+	color: #4A4A4A;	
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    text-align: center;
+    padding-top: 19px;
+}
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+  border: 1px solid #ddd;
+}
+.panel-group,
+.panel-group .panel,
+.panel-group .panel-heading,
+.panel-group .panel-heading a,
+.panel-group .panel-title,
+.panel-group .panel-title a,
+.panel-group .panel-body,
+.panel-group .panel-group .panel-heading + .panel-collapse > .panel-body {
+}
+.panel-group .panel-heading {
+  padding: 0;
+}
+.panel-group .panel-heading a {
+  display: block;
+  background: #F8F9F9;
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+}
+.panel-group .panel-heading a.collapsed {
+  background: #ffffff;
+  color: inherit;
+}
+.panel-group .panel-heading a:after {
+  font-family: 'Glyphicons Halflings';
+  content: "\e114";
+  position: absolute;
+  right: 20px;
+  top:15px;
+  font-size:16px;
+  color:black;
+}
+.panel-group .panel-heading a.collapsed:after {
+  content: "\e113";
+}
+.panel-group .panel-body {
+  background: #ffffff;
+  padding: 30px;
+}
+.panel-group .panel {
+  background-color: transparent;
+}
+.panel-group .panel-body p:last-child,
+.panel-group .panel-body ul:last-child,
+.panel-group .panel-body ol:last-child {
+  margin-bottom: 0;
+}
+>>> .mat-tab-body-content.ng-trigger.ng-trigger-translateTab {
+    overflow: hidden;
+}
+a#collapseSecond {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1), 0 1px 5px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.2);
+    height: 25%;	
+    width: 100%;
+}
+.panel.panel-default {
+    margin-bottom: 1%;
+}
+div#progressbarSecond {
+    width: 116%;
+    margin-left: -90%; 
+}
+div#panel_default_collapseSecond {
+    margin-left: 5.63%;
+    margin-right: 5.14%;
+}
+.alert-danger {
+    background-color: #F8F9F9;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+label#mfsEfficiency {
+    color: #00BFFF;
+    font-size: 16px;
+    font-weight: normal;
+}   
+label#mfsName {
+    color: #536B8E;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+}
+>>> .mat-tab-label-active{
+     background-color: rgba(207, 216, 220, 0.3);
+      border-bottom: 2px solid #00BFFF;
+}
+.custom-date{
+  color: #536C8E;
+  font-size: 16px;
+  font-weight: normal;
+  padding-left: 18%;
+}
+.custom-date-range{
+  color: #536C8E;
+  padding-left: 0.5%;
+}
+
+/* Utilization section start */
+
+>>> .mat-tab-label-active{
+     background-color: rgba(207, 216, 220, 0.3);
+      border-bottom: 2px solid #00BFFF;
+}
+.divDonut{
+    /*padding-left: 7%;*/
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+.divDonutLegend{
+    text-align: center;
+    padding-top: 5%;
+    padding-left: 3%;
+    padding-right: 0%;
+}
+.lblDonutLegendGreen{
+     background-color:#b3ea32; 
+     height: 5px; 
+     width: 100px;
+}
+.lblDonutLegendYellow{
+     background-color:#f4ed11; 
+     height: 5px; 
+     width: 100px;
+}
+.lblDonutLegendAmber{
+     background-color:#ffb324; 
+     height: 5px; 
+     width: 100px;
+}
+.label-error{
+    color: red;
+    text-align: center;
+    padding-left: 150px;
+    padding-top: 100px;
+}
+/* Utilization section end */

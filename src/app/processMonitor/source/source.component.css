@@ -1,0 +1,36 @@
+md-grid-tile {
+  font-size: 12px;
+  text-align: center;
+}
+.divCloseModal {
+  text-align:right;
+  height:25px;
+}
+.btnCloseModal {
+  min-width:20px;
+  background-color:#edeff0;
+}
+>>> figure.mat-figure#actualValue {
+    border-style: groove;
+}
+label#lotsNameId1 {
+    font-family: "Arial";
+    color: #4A4A4A;
+    font-weight: 500;
+    font-size: 16px;
+}
+label#lotsNameId2 {
+    font-family: "Arial";
+    color: #4A4A4A;
+    font-weight: 700;
+     font-size: 16px;
+}
+    div#sourceDialog {
+    height: 130px;
+}
+.label-error{
+    color: red;
+    text-align: center;
+    padding-left: 200px;
+    padding-top: 50px;
+}

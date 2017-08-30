@@ -1,0 +1,33 @@
+<div class="row row-margin">
+    <div class="col-sm-1 col-margin">
+        <div class="glyphicon glyphicon-circle-arrow-left" (click)="navigateToContentProvider();"></div>
+    </div>
+    <div class="col-sm-3 col-margin">
+        <label class="lblHeading">{{ 'content360Component.contentSearch' | translate:lang }}</label><br/>
+        <label class="lblContent">{{this.searchParam}}</label>
+        <hr style="border-color: #536C8E"/>
+    </div>
+    <div class="col-sm-3 col-margin">
+        <label class="lblHeading">{{ 'content360Component.refineSearch' | translate:lang }}</label><br/>
+        <label class="glyphicon glyphicon-search"></label>
+         <hr style="border-color: #536C8E"/>
+    </div>
+</div>
+<div [ngBusy]="busy"></div>
+<div class="row row-margin">
+    <div class="col-sm-10 content-margin">
+        <md-card class="card">
+            <md-card-header class="headerMargin">
+                <md-card-title class="headerTitle">{{ 'content360Component.category' | translate:lang }}</md-card-title>
+            </md-card-header>
+            <hr/>
+            <div><img src="../assets/images/content-providers/pubmed.png" alt="headerImage" class="img" /></div>
+            <md-card-content *ngFor="let data of dataArray ; let i=index">
+                <h5 class="label-author">{{i+1}}.</h5>
+                <a id="link" target="_blank" href={{data.link}}>{{data.title}}</a><br/>
+                <label class="label-author"> {{data.authors}}</label><br/>
+                <label class="label-author">{{data.journal_name}}. {{data.date}}.</label>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>

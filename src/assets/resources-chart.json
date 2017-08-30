@@ -1,0 +1,12 @@
+{
+  "donutChart": [
+    {
+      "amberValue": "15.50%",
+      "yellowValue": "24.50%",
+      "greenValue": "60.00%",
+      "amberColorCode": "A",
+      "yellowColorCode": "Y",
+      "greenColorCode": "G"
+    }
+  ]
+}

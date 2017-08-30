@@ -1,0 +1,172 @@
+[
+  {
+    "providerId": 1,
+    "providerName": "KEGG",
+    "providerShortName": "kegg",
+    "providerFooterColor": "#9e004c",
+    "resultCount": "9",
+    "providerCategory": "Diseases",
+    "isPrimary": "false",
+    "isDisabled": "false"
+  },
+  {
+    "providerId": 2,
+    "providerName": "MalaCards",
+    "providerShortName": "malacards",
+    "providerFooterColor": "#41762f",
+    "resultCount": "50",
+    "providerCategory": "Diseases",
+    "isPrimary": "true",
+    "isDisabled": "false"
+  },
+  {
+    "providerId": 3,
+    "providerName": "DrugBank",
+    "providerShortName": "drugbank",
+    "providerFooterColor": "#337ab7",
+    "resultCount": "24",
+    "providerCategory": "Drugs",
+    "isPrimary": "true",
+    "isDisabled": "false"
+  },
+  {
+    "providerId": 4,
+    "providerName": "Clarivate",
+    "providerShortName": "clarivate",
+    "providerFooterColor": "#6817ff",
+    "resultCount": "32",
+    "providerCategory": "Literature",
+    "isPrimary": "false",
+    "isDisabled": "false"
+  },
+  {
+    "providerId": 5,
+    "providerName": "CCC",
+    "providerShortName": "ccc",
+    "providerFooterColor": "#005fb4",
+    "resultCount": "78",
+    "providerCategory": "Literature",
+    "isPrimary": "false",
+    "isDisabled": "false"
+  },
+  {
+    "providerId": 6,
+    "providerName": "ELSEVIER",
+    "providerShortName": "elsevier",
+    "providerFooterColor": "#ff962a",
+    "resultCount": "12",
+    "providerCategory": "Literature",
+    "isPrimary": "false",
+    "isDisabled": "false"
+  },
+  {
+    "providerId": 7,
+    "providerName": "PubMed",
+    "providerShortName": "pubmed",
+    "providerFooterColor": "#0c3681",
+    "resultCount": "8",
+    "providerCategory": "Literature",
+    "isPrimary": "true",
+    "isDisabled": "true"
+  },
+  {
+    "providerId": 8,
+    "providerName": "BioCyc",
+    "providerShortName": "biocyc",
+    "providerFooterColor": "#f89838",
+    "resultCount": "10",
+    "providerCategory": "Pathways",
+    "isPrimary": "false",
+    "isDisabled": "false"
+  },
+  {
+    "providerId": 9,
+    "providerName": "KEGG",
+    "providerShortName": "kegg",
+    "providerFooterColor": "#9e004c",
+    "resultCount": "34",
+    "providerCategory": "Pathways",
+    "isPrimary": "true",
+    "isDisabled": "false"
+  },
+  {
+    "providerId": 10,
+    "providerName": "NIH",
+    "providerShortName": "nih",
+    "providerFooterColor": "#205081",
+    "resultCount": "18",
+    "providerCategory": "Pathways",
+    "isPrimary": "false",
+    "isDisabled": "false"
+  },
+  {
+    "providerId": 11,
+    "providerName": "QIAGEN",
+    "providerShortName": "qiagen",
+    "providerFooterColor": "#e0003c",
+    "resultCount": "88",
+    "providerCategory": "Pathways",
+    "isPrimary": "false",
+    "isDisabled": "false"
+  },
+  {
+    "providerId": 12,
+    "providerName": "REACTOME",
+    "providerShortName": "reactome",
+    "providerFooterColor": "#2d5ea8",
+    "resultCount": "20",
+    "providerCategory": "Pathways",
+    "isPrimary": "false",
+    "isDisabled": "false"
+  },
+  {
+    "providerId": 13,
+    "providerName": "PDB",
+    "providerShortName": "pdb",
+    "providerFooterColor": "#3f5c72",
+    "resultCount": "46",
+    "providerCategory": "Proteins",
+    "isPrimary": "true",
+    "isDisabled": "false"
+  },
+  {
+    "providerId": 14,
+    "providerName": "UniProt",
+    "providerShortName": "uniprot",
+    "providerFooterColor": "#33a3cd",
+    "resultCount": "62",
+    "providerCategory": "Proteins",
+    "isPrimary": "false",
+    "isDisabled": "false"
+  },
+  {
+    "providerId": 15,
+    "providerName": "EPO",
+    "providerShortName": "epo",
+    "providerFooterColor": "#ee3338",
+    "resultCount": "30",
+    "providerCategory": "Patents",
+    "isPrimary": "false",
+    "isDisabled": "false"
+  },
+  {
+    "providerId": 16,
+    "providerName": "uspto",
+    "providerShortName": "uspto",
+    "providerFooterColor": "#333333",
+    "resultCount": "20",
+    "providerCategory": "Patents",
+    "isPrimary": "true",
+    "isDisabled": "false"
+  },
+  {
+    "providerId": 17,
+    "providerName": "WIPO",
+    "providerShortName": "wipo",
+    "providerFooterColor": "#66768f",
+    "resultCount": "68",
+    "providerCategory": "Patents",
+    "isPrimary": "false",
+    "isDisabled": "false"
+  }
+]

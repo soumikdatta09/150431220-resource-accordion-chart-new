@@ -1,0 +1,90 @@
+<nav class="navbar navbar-default no-border-navbar">
+	<div class="container-fluid no-padding-container-fluid">
+		<div class="navbar-header">
+			<label class="logoA">
+				<img src="../assets/images/burst-header.png" alt="headerImage" />
+				<img src="../assets/images/Logo-footer.png"  alt="headerImage"/>
+				</label>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><label class="pagename">{{ headerValue | translate:lang }}</label></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right navbar-right-padding">
+			<li><label md-span *ngIf="data" id="welcome">{{ 'homeComponent.welcome'  | translate:lang }}, {{data}}</label></li>
+			<li><label *ngIf="role" id="role">{{ 'homeComponent.role'  | translate:lang }} {{role}}</label></li>
+			<li><a routerLink="/login" id="Logout">{{ 'homeComponent.logout'  | translate:lang }}</a></li>
+		</ul>
+	</div>
+</nav>
+
+<div id="main" class="container-fluid">
+	<div class="row">
+		<div id="mySidenav" class="sidenav">
+			<div id="divToggle" style="text-align: right; margin-top:2%;">
+				<span class="glyphicon" style="font-size:30px; color: #0C3681; cursor:pointer;text-align:right;" id="spanToggleIcon" (click)="toggleNav()">&#9776;</span>
+				<span class="glyphicon" style="font-size:26px; color: #0C3681; cursor:pointer;text-align:right; display:none;" id="spanToggleIconArrow"
+				 (click)="toggleNav()">&rarr;</span>
+			</div>
+
+			<ul class="sidenavmenulist" id="sidenavmenulist">
+				<li>
+					<a class="sidenavLink" routerLink="/home/index" id="home">
+						<div data-icon="h" class="icon icon-navigation"></div>
+						<span class="sidenavMenuLinkText" id="spanHome">{{ 'homeComponent.home' | translate:lang }}</span>
+					</a>
+				</li>
+				<li *ngIf="role =='Lab Scientist'">
+					<a class="sidenavLink" routerLink="/home/processmonitor/project" id="processMonitor">
+						<div data-icon="p" class="icon icon-navigation"></div>
+						<span class="sidenavMenuLinkText" id="spanProcess">{{ 'homeComponent.processMonitor' | translate:lang }}</span></a>
+				</li>
+				<li *ngIf="role !=='Lab Scientist'">
+					<a class="sidenavLink" routerLink="/home/processmonitor" id="processMonitor">
+						<div data-icon="p" class="icon icon-navigation"></div>
+						<span class="sidenavMenuLinkText" id="spanProcess">{{ 'homeComponent.processMonitor' | translate:lang }}</span></a>
+				</li>
+				<li>
+					<a class="sidenavLink" routerLink="/home/resourcestracker" id="resourcesTracker">
+						<div data-icon="r" class="icon icon-navigation"></div>
+						<span class="sidenavMenuLinkText" id="spanResource">{{ 'homeComponent.resourcesTracker' | translate:lang }}</span></a>
+				</li>
+				<li>
+					<a class="sidenavLink" routerLink="/home/content360" id="content360">
+						<div data-icon="c" class="icon icon-navigation"></div>
+						<span class="sidenavMenuLinkText" id="spanContent">{{ 'homeComponent.content360' | translate:lang }}</span></a>
+				</li>
+				<li>
+					<a class="sidenavLink" routerLink="/home/patternview" id="PatternView">
+						<div data-icon="P" class="icon icon-navigation"></div>
+						<span class="sidenavMenuLinkText" id="spanPattern">{{ 'homeComponent.patternView' | translate:lang }}</span></a>
+				</li>
+			</ul>
+		</div>
+
+		<router-outlet></router-outlet>
+	</div>
+</div>
+<footer>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3 offset-md-1 footerlogo">
+				<img src="../assets/images/burst-footer.png" alt="headerImage" />
+				<img src="../assets/images/Logo-footer.png" alt="headerImage" />
+			</div>
+			<div class="col-md-1 offset-md-1 footerLinks">
+				|<a routerLink="/home/index" class="homeFooter" id="footerHome">{{ 'homeComponent.home'  | translate:lang }}</a>
+			</div>
+			<div class="col-md-1 offset-md-1 footerLinks">
+				|<a routerLink="" class="homeFooter" id="footerAbout">{{ 'homeComponent.about'  | translate:lang }}</a>
+			</div>
+			<div class="col-md-1 offset-md-1 footerLinks">
+				|<a routerLink="" class="homeFooter" id="footerContact">{{ 'homeComponent.contact'  | translate:lang }}</a>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container-fluid">
+			&copy; {{ date | date:'yyyy' }} {{ 'homeComponent.copyright' | translate:lang }}
+		</div>
+	</div>
+</footer>

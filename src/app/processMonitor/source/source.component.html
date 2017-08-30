@@ -1,0 +1,42 @@
+<div [ngBusy]="busy"></div>
+<div class="divCloseModal">
+  <button class="btnCloseModal" md-button md-dialog-close="X">X</button>
+</div>
+<label id="lotsNameId1">{{ 'lotsComponent.lot#' | translate:lang }}</label>
+<label id="lotsNameId2">{{name}}</label>
+<div *ngIf="dataError == true">
+  <label class="label-error">{{ 'genericError' | translate:lang }} </label>
+</div>
+<div *ngIf="dataError != true">
+  <div md-dialog-content id="sourceDialog">
+
+    <md-grid-list cols="20" rowHeight="1:1">
+      <md-grid-tile [style.background]="'#EDEFF0'" [style.font-weight]="'Bold'" [colspan]="2">{{ 'sourceComponent.unitOperation' | translate:lang }}</md-grid-tile>
+      <md-grid-tile [style.background]="'#EDEFF0'" [style.font-weight]="'Bold'" [colspan]="2">{{ 'sourceComponent.parameter' | translate:lang }}</md-grid-tile>
+      <md-grid-tile [style.background]="'#EDEFF0'" [style.font-weight]="'Bold'" [colspan]="2">{{ 'sourceComponent.unitOfMeasure' | translate:lang }}</md-grid-tile>
+      <md-grid-tile [style.background]="'#EDEFF0'" [style.font-weight]="'Bold'" [colspan]="2">{{ 'sourceComponent.processRangeLo' | translate:lang }}</md-grid-tile>
+      <md-grid-tile [style.background]="'#EDEFF0'" [style.font-weight]="'Bold'" [colspan]="2">{{ 'sourceComponent.processRangeHi' | translate:lang }}</md-grid-tile>
+      <md-grid-tile [style.background]="'#EDEFF0'" [style.font-weight]="'Bold'" [colspan]="2">{{ 'sourceComponent.normOpRangeLolo' | translate:lang }}</md-grid-tile>
+      <md-grid-tile [style.background]="'#EDEFF0'" [style.font-weight]="'Bold'" [colspan]="2">{{ 'sourceComponent.normOpRangeHihi' | translate:lang }}</md-grid-tile>
+      <md-grid-tile [style.background]="'#EDEFF0'" [style.font-weight]="'Bold'" [style.border]="'solid'" [style.border-width]="'0.5px'"
+        [colspan]="2">{{ 'sourceComponent.actualValue' | translate:lang }}</md-grid-tile>
+      <md-grid-tile [style.background]="'#EDEFF0'" [style.font-weight]="'Bold'" [colspan]="3">{{ 'sourceComponent.classification' | translate:lang }}</md-grid-tile>
+      <md-grid-tile [style.background]="'#EDEFF0'" [style.font-weight]="'Bold'" [colspan]="1">{{ 'sourceComponent.status' | translate:lang }}</md-grid-tile>
+    </md-grid-list>
+
+    <md-grid-list cols="20" rowHeight="1:1">
+      <md-grid-tile [style.background]="'#F8F9F9'" [colspan]="2">{{ unitName }}</md-grid-tile>
+      <md-grid-tile [style.background]="'#F8F9F9'" [colspan]="2">{{ paramName }}</md-grid-tile>
+      <md-grid-tile [style.background]="'#F8F9F9'" [colspan]="2">{{ unit_measure }}</md-grid-tile>
+      <md-grid-tile [style.background]="'#F8F9F9'" [colspan]="2">{{ process_range_low }}</md-grid-tile>
+      <md-grid-tile [style.background]="'#F8F9F9'" [colspan]="2">{{ process_range_high }}</md-grid-tile>
+      <md-grid-tile [style.background]="'#F8F9F9'" [colspan]="2">{{ normal_operating_range_low }}</md-grid-tile>
+      <md-grid-tile [style.background]="'#F8F9F9'" [colspan]="2">{{ normal_operating_range_high }}</md-grid-tile>
+      <md-grid-tile [style.background]="'#F8F9F9'" [style.border]="'solid'" [style.border-top]="'hidden'" [style.border-width]="'0.5px'"
+        [colspan]="2">{{ actual_value }}</md-grid-tile>
+      <md-grid-tile [style.background]="'#F8F9F9'" [colspan]="3">{{ parameter_type }}</md-grid-tile>
+      <md-grid-tile [style.background]="'#F8F9F9'" [colspan]="1"><img [src]="img_url" /></md-grid-tile>
+    </md-grid-list>
+
+  </div>
+</div>

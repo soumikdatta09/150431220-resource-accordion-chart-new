@@ -1,0 +1,117 @@
+md-grid-tile {
+  font-size: 12px;
+  text-align: center;
+}
+.divCloseModal {
+  text-align:right;
+  height:4px;
+}
+.btnCloseModal {
+  min-width:20px;
+  background-color:#edeff0;
+}
+.blastView-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 650px;
+  min-width: 300px;
+}
+.mat-table {
+  overflow: auto;
+}
+.mat-dialog-content {
+  overflow: auto;
+}
+.progress-bar-danger {
+    background-color: #B0011B;
+}
+.progress-bar-warning {
+    background-color: #Fab600;
+}
+.progress-bar-success {
+    background-color: #7ED321;
+}
+div#progressbar_blastView {
+    width: 17px;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    margin-left: 7%;
+    height: 17px;
+}
+>>> button.mat-sort-header-button {
+    color: #4A4A4A;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Roboto;
+}
+.panel-group.custom-table {
+    margin-bottom: -1%;
+}
+h4.panel-title.title-table {
+    margin-left: 2%;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Roboto;
+    color: #4A4A4A;
+}
+.panel.panel-default.default-table {
+    border-radius: 0px;
+}
+#campName{
+  font-weight: normal;
+  font-family: Roboto;
+  color: #4A4A4A;
+  font-size: 18px;
+  margin-top: -2.5%;
+  margin-left: 3.3%;
+}
+md-icon#table-source {
+    color: #1BBEFE;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 1%;
+}
+md-cell#source {
+    color: #1BBEFE;
+    font-weight: 500;  
+    margin-top: 1%; 
+}
+label#source_icon {
+    margin-top: 8%;
+}
+label#source_label{
+   font-size: 12px;
+   font-weight: 500;  
+   margin-top: -12%;
+   margin-left: -4%;
+}
+>>>.mat-paginator-page-size {
+    display: none !important;
+}
+>>> .mat-paginator-increment, .mat-paginator-decrement {
+    border-color: #1BBEFE;
+}
+>>> .mat-icon-button[disabled] .mat-paginator-increment, .mat-icon-button[disabled] .mat-paginator-decrement {
+    border-color: rgba(0, 0, 0, 0.38);
+}
+>>> .mat-paginator-decrement {
+    border-color: #1BBEFE;
+}
+div#source_cell {
+   margin-left: -12%;
+   color: #1BBEFE;	
+   font-family: Roboto;	
+   font-size: 12px;	
+   font-weight: 500;
+}
+>>>.mat-cell {
+    font-size: 14px;
+    font-family: Roboto;
+    color: #4A4A4A;
+}
+.label-error{
+    color:red;
+    padding-top:50px;
+    padding-left: 200px;
+
+}

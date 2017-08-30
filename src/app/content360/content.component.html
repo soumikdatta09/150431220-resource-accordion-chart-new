@@ -1,0 +1,60 @@
+<div class="panel panel-default custom-panel contentHeader">
+  <div class="panel-body">
+    <div class="col-lg-6 custom-group">
+      <div class="input-group">
+        <input type="text"  #searchInput="ngModel"  class="form-control"  placeholder="{{ 'content360Component.searchAll' | translate:lang }}"
+           [(ngModel)]="searchText" required>
+          <span class="input-group-btn">
+            <button id="btnSearch"  class="btn btn-default"  type="submit"  (click)="getContentProvider()"  [disabled]="!searchInput.valid">
+              <span class="glyphicon glyphicon-search"  aria-hidden="true"></span>
+            </button>
+          </span>
+      </div>
+    </div>
+    <div id="chk" class="col-lg-5 custom-checkbox">
+      <section class="custom-section">
+        <label class="checkbox-margin .mat-checkbox-frame">{{ 'content360Component.primarySources' | translate:lang }}</label>
+        <md-checkbox id="chkPrimary" class="checkbox-margin .mat-checkbox-frame" [(ngModel)]="selectedPrimarySources" (change)="selectPrimarySources();"></md-checkbox>
+        <label class="checkbox-margin .mat-checkbox-frame">{{ 'content360Component.selectAll' | translate:lang }}</label>
+        <md-checkbox id="chkSelectAll" class="checkbox-margin .mat-checkbox-frame" [(ngModel)]="selectedAll" (change)="selectAll();"></md-checkbox>
+      </section>
+    </div>
+  </div>
+</div>
+<div [ngBusy]="busy"></div>
+<div id="category" *ngFor="let content of contents;let contentIndex=index">
+  <div class="row row-margin">
+    <div class="col-lg-8">
+      <h4 class="custom-header-category">{{content.name}}</h4>
+    </div>
+    <div class="col-lg-4">
+      <section class="custom-section category">
+        <label class="checkbox-margin-unselect .mat-checkbox-frame custom-category-checkbox">{{ 'content360Component.unselect' | translate:lang }}</label>
+        <md-checkbox class="checkbox-margin .mat-checkbox-frame custom-category-checkbox" [(ngModel)]="content.selected" (change)="selectCategory(content.name);"></md-checkbox>
+        <a class="glyphicon glyphicon-minus-sign custom-minus" data-toggle="collapse" data-parent="#nested" href="#collapseOne_contentIndex{{contentIndex}}"></a>
+      </section>
+    </div>
+    <div class="col-lg-12">
+      <hr class="custom-line">
+    </div>
+    <div id="collapseOne_contentIndex{{contentIndex}}" class="collapse in">
+      <div *ngIf="errorContent" class="alert-danger"></div>
+      <div class="col-sm-3 col-padding" *ngFor="let provider of content.providers">
+        <md-card class="custom_card" style="padding-left: 0;padding-top: 0">
+          <div class="card-header">
+            <section class="category-section">
+              <md-checkbox id="{{provider.providerId}}" class="checkbox-margin .mat-checkbox-frame custom-category-checkbox cardClass"
+                [disabled]="provider.isDisabled" [(ngModel)]="provider.selected" (change)="checkIfAllSelected();"></md-checkbox>
+            </section>
+            <span class="glyphicon glyphicon-info-sign image_allign"></span>
+          </div>
+          <hr>
+          <img class="imgCard" src="../assets/images/content-providers/{{provider.providerShortName}}.png ">
+          <div>
+            <md-card-footer id="details " class="custom_card_footer " [style.background]="provider.providerFooterColor"></md-card-footer>
+          </div>
+        </md-card>
+      </div>
+    </div>
+  </div>
+</div>
